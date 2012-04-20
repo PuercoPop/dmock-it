@@ -1,0 +1,24 @@
+#!/bin/sh
+
+ack '# TODO' apps --ignore-dir=common > TODO
+
+# If want to make the commit only if it passes the tests un comment the lines
+# below
+###
+# Check if inside a virtualenv envioroment
+# Check for $VIRTUAL_ENV
+#if [[ $VIRTUAL_ENV != "" ]]
+#then
+#else
+#    # If not active virtualenv
+#    source env/bin/active
+#fi
+#
+# Run tests
+#python project/manage.py test
+
+# Check if tests succesfully passed
+#exit_code = $?
+#if [[ $exit_code != 0 ]];then
+#    exit $exit_code
+#fi
